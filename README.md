@@ -30,4 +30,6 @@ The solution follows these steps:
 | D - Difficult | 1,804 |
 | E - Elaborate | 1,872 |
 | **Total** | **3,688** |
+
+
 With more optimisation, D and E might be improved. 
