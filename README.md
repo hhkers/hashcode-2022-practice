@@ -6,11 +6,11 @@ You can find the problem statements [here](https://codingcompetitions.withgoogle
 
 ## Solution
 
-The codes for the solution are in [Solve.ipynb](notebooks/Solve.ipynb) and [src.cpp](src.cpp).
+The codes for the solution are in [Solve.ipynb](notebook/Solve.ipynb) and [src.cpp](src.cpp).
 
 The solution follows these steps:
 
-1. Processing ([Solve.ipynb](notebooks/Solve.ipynb))
+1. Processing ([Solve.ipynb](notebook/Solve.ipynb))
 
    1. Count ```likes```, ```dislikes``` and calculate ```like - dislike``` for each ingredient.
    
