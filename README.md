@@ -28,8 +28,7 @@ The solution follows these steps:
 | B - Basic  | 5 |
 | C - Coarse  | 5 |
 | D - Difficult | 1,804 |
-| E - Elaborate | 1,872 |
-| **Total** | **3,688** |
-
+| E - Elaborate | 1,958 |
+| **Total** | **3,774** |
 
 With more optimisation, D and E might be improved. 
