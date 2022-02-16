@@ -82,28 +82,35 @@ int main() {
 
     static std::random_device rd;
     static std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(0, allv.size()-1);
+    std::uniform_int_distribution<> dis(0, N-1);
     
     int maxScore = score(ingreds);
-    for(int C=1; C<=3; C++) {
-        for(int i=0; i<20000; i++) {
-            auto tmpIng = ingreds;
-            for(int c=0;c<C;c++) {
-                int k = dis(gen);            
-                if (tmpIng.find(allv[k]) == tmpIng.end())
-                    tmpIng.insert(allv[k]);
-                else
-                    tmpIng.erase(allv[k]);
+    for(int i=0; i<200000; i++) {
+        auto tmpIng = ingreds;
+        int k = dis(gen);
+        bool alreadyLike = true;
+        for(auto ing: likes[k]) {
+            if (tmpIng.find(ing) == tmpIng.end()){
+                tmpIng.insert(ing);
+                alreadyLike = false;
             }
-            int tmpScore = score(tmpIng);
-            if (tmpScore >= maxScore) {
-                maxScore = tmpScore;
-                ingreds = tmpIng;
+        }
+        for(auto ing: dislikes[k]) {
+            if (tmpIng.find(ing) != tmpIng.end()){
+                tmpIng.erase(ing);
+                alreadyLike = false;
             }
+        }
+        if (alreadyLike)
+            continue;
 
-            if( i%1000 == 0) {
-                cout << C << " " << maxScore << " " << i << endl;
-            }
+        int tmpScore = score(tmpIng);
+        if (tmpScore >= maxScore) {
+            maxScore = tmpScore;
+            ingreds = tmpIng;
+        }
+        if( i%1000 == 0) {
+            cout << maxScore << " " << i << endl;
         }
     }
     cout << "-----" << endl;

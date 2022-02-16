@@ -18,7 +18,9 @@ The solution follows these steps:
    
 2. Optimisation ([src.cpp](src.cpp))
 
-   1. Random swap for 30 min
+   1. Swap a random ingredient from "on the pizza" to "not on the pizza" and vice versa.
+
+   2. Pick a random client that is currently not satisfied and swap ingredients to satisfy.
 
 
 ## Results
@@ -28,7 +30,7 @@ The solution follows these steps:
 | B - Basic  | 5 |
 | C - Coarse  | 5 |
 | D - Difficult | 1,804 |
-| E - Elaborate | 1,958 |
-| **Total** | **3,774** |
+| E - Elaborate | 2,065 |
+| **Total** | **3,881** |
 
 With more optimisation, D and E might be improved. 
