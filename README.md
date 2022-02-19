@@ -29,8 +29,8 @@ The solution follows these steps:
 | A - An example | 2 |
 | B - Basic  | 5 |
 | C - Coarse  | 5 |
-| D - Difficult | 1,804 |
+| D - Difficult | 1,805 |
 | E - Elaborate | 2,065 |
-| **Total** | **3,881** |
+| **Total** | **3,882** |
 
 With more optimisation, D and E might be improved. 
